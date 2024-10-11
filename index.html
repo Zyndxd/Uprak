@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Uprak1.css">
+</head>
+
+<body>
+<div id="table">
+    <div>
+        <div id="header">
+            <h2>Website Pribadi Fazar Ihsan</h2>
+            <h5>Sebuah Catatan Perjalanan Hidup Seorang Anak Kampung</h5>
+        </div>
+        <div id="home">
+            <a href="#" onclick="loadcontent('Home.html')">Home</a>
+            <a href="#" onclick="loadcontent('Biodata.html')">Biodata</a>
+            <a href="#" onclick="loadcontent('Artikel.html')">Artikel</a>
+        </div>
+    </div>
+    <div id="Table">
+        <div id="List">
+            <center>
+                <b>Sosial Media</b>
+            </center>
+            <a href="https://www.instagram.com/"><li>Instagram</li></a>
+            <a href="#" onclick="loadcontent('Youtube.html')"><li>Youtube</li></a>
+        </div>
+        <div id="Hasil">
+            Blog ini berisi tentang cerita jalan-jalan Hasan. Saya memang gemar berjalan-jalan. Shopping di mall, makan
+            di resto, hingga ber-adventure. Jadi, sekitar 90-95% tulisan di blog ini adalah tentang traveling. Kisah
+            jalan-jalan keluarga Fazar 'Sang anak kampung'. Cerita jalan-jalan ini awalnya ditulis di buku catatan saya.
+            Nanti, satu per satu cerita jalan-jalan selama ini akan pindah ke blog ini. Cerita perjalanan yang ada di
+            sini adalah pengalaman pribadi saya. Adapun alamat dan no kontak penginapan, resto, dan lainnya ditulis
+            berdasarkan yang saya dapat saat itu. Tentu saya akan update bila memang mengetahui perubahan. Tetapi bila
+            ada perubahan kontak yang saya tidak diketahui tentunya di luar kuasa saya. Karena (sekali lagi) ini adalah
+            cerita pengalaman pribadi. Silakan menikmati blog ini. Untuk teman-teman yang ingin bertanya lebih lanjut
+            tentang segala hal yang ada di blog ini atau juga untuk para advertiser yang ingin mengajak kerjasama,
+            silakan email ke fazarihsanpratama@gmail.com. Salam saya, Fazar Ihsan Pratama
+        </div>
+    </div>
+    <div>
+        <div id="footer">
+            Copyright © Fazar Ihsan Pratama
+        </div>
+    </div>
+</div>
+<script>
+    function loadcontent(page){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', page, true);
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4  && xhr.status == 200) {
+                document.getElementById('Hasil').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+</script>
+</body>
+
+</html>
